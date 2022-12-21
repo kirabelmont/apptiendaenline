@@ -78,17 +78,11 @@ class _ProductFormState extends State<ProductForm> {
           SizedBox(height: getProportionateScreenHeight(20)),
           SizedBox(height: getProportionateScreenHeight(30)),
           FormError(errors: errors),
-          DefaultButton(
-            text: "Continuar",
-            press: () {
-              if (_formKey.currentState!.validate()) {
-                _formKey.currentState!.save();
-                // if all are valid then go to success screen
-                KeyboardUtil.hideKeyboard(context);
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
-              }
-            },
-          ),
+          ElevatedButton(
+            style: ButtonStyle(),
+            onPressed: () {},
+            child: Text('Continuar'),
+          )
         ],
       ),
     );
