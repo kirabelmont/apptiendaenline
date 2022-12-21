@@ -5,11 +5,8 @@ import 'package:tiendaonline/screens/home/components/widgets/baner_mujer.dart';
 import 'package:tiendaonline/screens/home/components/widgets/baner_ni%C3%B1os.dart';
 
 import '../../../size_config.dart';
-import 'widgets/categories.dart';
-import 'widgets/discount_banner.dart';
+
 import 'widgets/home_header.dart';
-import 'widgets/popular_product.dart';
-import 'widgets/special_offers.dart';
 
 class Body extends StatelessWidget {
   const Body({super.key});
