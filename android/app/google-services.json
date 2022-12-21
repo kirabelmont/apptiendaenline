@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "286394407264",
+    "project_id": "proyectoluis-f7b29",
+    "storage_bucket": "proyectoluis-f7b29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:286394407264:android:522e553d1a4eba8ebce605",
+        "android_client_info": {
+          "package_name": "com.example.tiendaonline"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "286394407264-6f6mh2vqqmlvlord1gffooh6papa788h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABMZQbZvLKK8hNasK4XpHsh8kP03o31Rc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "286394407264-6f6mh2vqqmlvlord1gffooh6papa788h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
