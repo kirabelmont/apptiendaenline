@@ -1,12 +1,20 @@
 import 'package:flutter/material.dart';
 
+import '../../../sign_in/sign_in_screen.dart';
+
 class BanerHombre extends StatelessWidget {
   const BanerHombre({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => SignInScreen(),
+            ));
+      },
       child: Stack(
         alignment: AlignmentDirectional.center,
         children: [
