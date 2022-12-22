@@ -3,6 +3,7 @@ import 'package:tiendaonline/screens/cart/cart_screen.dart';
 import 'package:tiendaonline/screens/complete_profile/complete_profile_screen.dart';
 import 'package:tiendaonline/screens/details/details_screen.dart';
 import 'package:tiendaonline/screens/forgot_password/forgot_password_screen.dart';
+import 'package:tiendaonline/screens/hombre/hombre.dart';
 import 'package:tiendaonline/screens/home/home_screen.dart';
 import 'package:tiendaonline/screens/login_success/login_success_screen.dart';
 import 'package:tiendaonline/screens/otp/otp_screen.dart';
@@ -28,4 +29,5 @@ final Map<String, WidgetBuilder> routes = {
   DetailsScreen.routeName: (context) => DetailsScreen(),
   CartScreen.routeName: (context) => const CartScreen(),
   ProfileScreen.routeName: (context) => ProfileScreen(),
+  HombrePage.routeName: (context) => const HombrePage(),
 };

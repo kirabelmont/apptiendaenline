@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../../../sign_in/sign_in_screen.dart';
+import 'package:tiendaonline/screens/hombre/hombre.dart';
 
 class BanerHombre extends StatelessWidget {
   const BanerHombre({Key? key}) : super(key: key);
@@ -12,7 +11,7 @@ class BanerHombre extends StatelessWidget {
         Navigator.push(
             context,
             MaterialPageRoute(
-              builder: (context) => SignInScreen(),
+              builder: (context) => const HombrePage(),
             ));
       },
       child: Stack(
