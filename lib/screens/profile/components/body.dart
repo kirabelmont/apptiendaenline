@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:tiendaonline/components/default_button.dart';
 import 'package:tiendaonline/screens/profile/components/barra_titulos.dart';
+import 'package:tiendaonline/screens/profile/components/button_Seguir.dart';
 import 'package:tiendaonline/screens/profile/components/tarjetas.dart';
 
 //import 'profile_menu.dart';
@@ -18,8 +20,8 @@ class Body extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               ProfilePic(),
-              const SizedBox(width: 20),
-              ProfilePic(),
+              const SizedBox(width: 40),
+              ButtonSeguidores(),
             ],
           ),
           const SizedBox(height: 20),
