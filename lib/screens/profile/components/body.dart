@@ -12,9 +12,16 @@ class Body extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
-          const ProfilePic(),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ProfilePic(),
+              const SizedBox(width: 20),
+              ProfilePic(),
+            ],
+          ),
           const SizedBox(height: 20),
-          ProfileMenu(
+          /*ProfileMenu(
             text: "Mi cuenta",
             icon: "assets/icons/User Icon.svg",
             press: () => {},
@@ -48,7 +55,7 @@ class Body extends StatelessWidget {
             text: "Cerrar sesion",
             icon: "assets/icons/Log out.svg",
             press: () {},
-          ),
+          ),*/
         ],
       ),
     );

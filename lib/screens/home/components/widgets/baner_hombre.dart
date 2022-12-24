@@ -7,13 +7,7 @@ class BanerHombre extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => const HombrePage(),
-            ));
-      },
+      onTap: () {},
       child: Stack(
         alignment: AlignmentDirectional.center,
         children: [
