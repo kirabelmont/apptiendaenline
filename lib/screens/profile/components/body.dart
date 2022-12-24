@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:tiendaonline/screens/profile/components/barra_titulos.dart';
+import 'package:tiendaonline/screens/profile/components/tarjetas.dart';
 
-import 'profile_menu.dart';
+//import 'profile_menu.dart';
 import 'profile_pic.dart';
 
 class Body extends StatelessWidget {
@@ -21,6 +23,28 @@ class Body extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 20),
+          TextosCambiantes(),
+          const SizedBox(height: 20),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TarjetasProfile(),
+              const SizedBox(
+                width: 20,
+              ),
+              TarjetasProfile(),
+            ],
+          ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TarjetasProfile(),
+              const SizedBox(
+                width: 20,
+              ),
+              TarjetasProfile(),
+            ],
+          ),
           /*ProfileMenu(
             text: "Mi cuenta",
             icon: "assets/icons/User Icon.svg",
