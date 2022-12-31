@@ -1,13 +1,13 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Articulo {
-  String id;
+  final String id;
   final String nombre;
   final String descripcion;
-  final int talla;
   final String color;
   final String condicion;
   final String categoria;
+  final int talla;
   final int precioOriginal;
   final int precioFinal;
 
