@@ -16,39 +16,69 @@ Future main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(Pruebas_traerdatos());
+  runApp(TiendaApp());
 }
 
-class Pruebas_traerdatos extends StatefulWidget {
-  Pruebas_traerdatos({Key? key}) : super(key: key);
+class TiendaApp extends StatelessWidget {
+  const TiendaApp({super.key});
 
-  @override
-  State<Pruebas_traerdatos> createState() => _Pruebas_traerdatosState();
-}
-
-class _Pruebas_traerdatosState extends State<Pruebas_traerdatos> {
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: FutureBuilder(
-          future: getProducto(),
-          builder: ((BuildContext context, AsyncSnapshot snapshot) {
-            if (snapshot.hasData) {
-              return ListView.builder(
-                itemCount: snapshot.data.length,
-                itemBuilder: ((context, index) {
-                  return Text(snapshot.data['nombre'].toString());
-                }),
-              );
-            } else {
-              return Center(
-                child: CircularProgressIndicator(),
-              );
+    return BlocProvider(
+      create: (_) => ProductoEstadoBloc(ProductoEstado([])),
+      child: MaterialApp(
+        debugShowCheckedModeBanner: false,
+        //title: 'Flutter Demo',
+        theme: theme(),
+        //home: MyHomePage(),
+        // We use routeName so that we dont need to remember the name
+        initialRoute: SplashScreen.routeName,
+        routes: routes,
+        //home: pruebasFirebase(),
+      ),
+    );
+  }
+}
+/*
+class pruebasFirebase extends StatefulWidget {
+  pruebasFirebase({Key? key}) : super(key: key);
+
+  @override
+  State<pruebasFirebase> createState() => _pruebasFirebaseState();
+}
+
+class _pruebasFirebaseState extends State<pruebasFirebase> {
+  late final dbfirebase = FirebaseFirestore.instance;
+  late final doc = dbfirebase.doc('/productos/6ShnXnwBhgZJng0OpbqJ');
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: StreamBuilder<DocumentSnapshot<Map<String, dynamic>>>(
+          stream: doc.snapshots(),
+          builder: (context, snapshot) {
+            if (!snapshot.hasData) {
+              return CircularProgressIndicator();
             }
-          }),
+            final docsnap = snapshot.data!;
+            return Column(
+              children: [
+                Text(docsnap['producto']),
+                Image.network(docsnap['foto']),
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {});
+                  },
+                  child: Text('hola'),
+                ),
+              ],
+            );
+          },
         ),
       ),
     );
   }
 }
+*/
