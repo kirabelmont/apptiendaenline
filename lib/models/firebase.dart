@@ -3,7 +3,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 FirebaseFirestore db = FirebaseFirestore.instance;
 
 Future<List> getProducto() async {
-  List productos = [];
+  List? productos = [];
 
   CollectionReference collectionReferenceProductos = db.collection('productos');
   QuerySnapshot queryproductos = await collectionReferenceProductos.get();
